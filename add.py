@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from flask import Flask
 
-app = FastAPI()
+app = Flask(__name__)
 
 @app.get("/")
 def home():
@@ -25,3 +25,6 @@ def multiply(a: float, b: float):
 def divide(a: float, b: float):
   result = a / b
   return (round(result,1))
+
+if (__name__ == "__main__":
+    app.run(host = "0.0.0.0", port = 10000)
