@@ -13,24 +13,23 @@ def add():
     result = a + b
     return str(round(result, 1))
 
-@app.get("/test")
-def test():
+@app.get("/subtraction")
+def subtraction():
     a = float(request.args.get("a"))
     b = float(request.args.get("b"))
-    result = a + b   
-    return (round(result,1))
-
-@app.get("/subtraction")
-def subtraction(a: float, b: float):
     result = a - b
-    return (round(result,1))
-
+    return str(round(result, 1))
+    
 @app.get("/multiply")
-def multiply(a: float, b: float):
-  result = a * b
-  return (round(result,1))
+def multiply():
+    a = float(request.args.get("a"))
+    b = float(request.args.get("b"))
+    result = a * b
+    return str(round(result, 1))
 
 @app.get("/divide")
-def divide(a: float, b: float):
-  result = a / b
-  return (round(result,1))
+def divide():
+    a = float(request.args.get("a"))
+    b = float(request.args.get("b"))
+    result = a / b
+    return str(round(result, 1))
