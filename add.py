@@ -2,6 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return "Server is Alive"
+
 @app.get("/add")
 def add(a: float, b: float):   
     result = a + b   
