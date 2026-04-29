@@ -7,7 +7,9 @@ def home():
     return "Server is Alive"
 
 @app.get("/add")
-def add(a: float, b: float):   
+def add():
+    a = float(request.args.get("a", 0))
+    b = float(request.args.get("b", 0))
     result = a + b   
     return (round(result,1))
 
