@@ -8,8 +8,8 @@ def home():
 
 @app.get("/add")
 def add():
-    a = float(request.args.get("a", 0))
-    b = float(request.args.get("b", 0))
+    a = float(request.args.get("a"))
+    b = float(request.args.get("b"))
     result = a + b   
     return (round(result,1))
 
