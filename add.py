@@ -8,14 +8,10 @@ def home():
 
 @app.get("/add")
 def add():
-    try:
-        a = float(request.args.get("a"))
-        b = float(request.args.get("b"))
-        result = a + b
-        return str(round(result, 1))
-    
-    except (TypeError, ValueError):
-        return {"error": "Invalid or missing input a or b"}
+    a = float(request.args.get("a"))
+    b = float(request.args.get("b"))
+    result = a + b
+    return str(round(result, 1))
 
 @app.get("/test")
 def test():
