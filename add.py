@@ -18,7 +18,7 @@ def subtraction():
     key = str(request.args.get("key"))
 
     if key == "VIP120":
-        return "OK"
+        return "subtract granted"
     return "Access Denied!"
 
     a = float(request.args.get("a"))
@@ -31,7 +31,7 @@ def multiply():
     key = str(request.args.get("key"))
 
     if key == "VIP121":
-        return "OK"
+        return "multiply granted"
     return "Access Denied!"
         
     a = float(request.args.get("a"))
@@ -44,7 +44,7 @@ def divide():
     key = str(request.args.get("key"))
 
     if key == "VIP122":
-        return "OK"
+        return "divide granted"
     return "Access Denied!"
         
     a = float(request.args.get("a"))
