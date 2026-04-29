@@ -12,7 +12,7 @@ def add():
         a = float(request.args.get("a"))
         b = float(request.args.get("b"))
         result = a + b
-        return {round(result, 1)}
+        return str(round(result, 1))
     
     except (TypeError, ValueError):
         return {"error": "Invalid or missing input a or b"}
