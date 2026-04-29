@@ -30,7 +30,7 @@ def subtraction():
 def multiply():
     key = str(request.args.get("key"))
 
-    if key == "VIP120":
+    if key == "VIP121":
         return "OK"
     return "Access Denied!"
         
@@ -43,7 +43,7 @@ def multiply():
 def divide():
     key = str(request.args.get("key"))
 
-    if key == "VIP120":
+    if key == "VIP122":
         return "OK"
     return "Access Denied!"
         
