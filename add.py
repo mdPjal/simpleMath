@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return "Server is Alive"
 
+@app.get("/health")
+def health():
+    return "OK"
+
 @app.get("/add")
 def add():
     a = float(request.args.get("a"))
