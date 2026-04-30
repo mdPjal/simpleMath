@@ -18,7 +18,7 @@ def subtraction():
     key = str(request.args.get("key"))
 
     if key == "VIP120":
-        return "subtract granted"
+        """return "subtract granted""""
         a = float(request.args.get("a"))
         b = float(request.args.get("b"))
         result = a - b
