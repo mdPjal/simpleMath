@@ -25,15 +25,12 @@ def subtraction():
     result = a - b
     return str(round(result, 1))
 
-    
-    
 @app.get("/multiply")
 def multiply():
     key = str(request.args.get("key"))
 
-    if key == "VIP121":
-        return "multiply granted"
-    return "Access Denied!"
+    if key != "VIP121":
+        return "Access Denied!"
         
     a = float(request.args.get("a"))
     b = float(request.args.get("b"))
@@ -44,9 +41,8 @@ def multiply():
 def divide():
     key = str(request.args.get("key"))
 
-    if key == "VIP122":
-        return "divide granted"
-    return "Access Denied!"
+    if key != "VIP122":
+        return "Access Denied!"
         
     a = float(request.args.get("a"))
     b = float(request.args.get("b"))
