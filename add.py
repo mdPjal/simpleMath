@@ -19,12 +19,13 @@ def subtraction():
 
     if key == "VIP120":
         return "subtract granted"
+        a = float(request.args.get("a"))
+        b = float(request.args.get("b"))
+        result = a - b
+        return str(round(result, 1))
     return "Access Denied!"
 
-    a = float(request.args.get("a"))
-    b = float(request.args.get("b"))
-    result = a - b
-    return str(round(result, 1))
+    
     
 @app.get("/multiply")
 def multiply():
