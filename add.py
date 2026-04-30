@@ -17,13 +17,13 @@ def add():
 def subtraction():
     key = str(request.args.get("key"))
 
-    if key == "VIP120":
-        #return "subtract granted"
-        a = float(request.args.get("a"))
-        b = float(request.args.get("b"))
-        result = a - b
-        return str(round(result, 1))
-    return "Access Denied!"
+    if key != "VIP120":
+        return "Access Denied!"
+
+    a = float(request.args.get("a"))
+    b = float(request.args.get("b"))
+    result = a - b
+    return str(round(result, 1))
 
     
     
